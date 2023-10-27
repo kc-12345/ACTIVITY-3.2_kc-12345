@@ -162,3 +162,6 @@ DELETE FROM public.heroitem WHERE hero_id = 1;
 
 --5
 SELECT p.player_name, h.hero_name FROM public.player p JOIN public.hero h ON p.hero_id = h.hero_id WHERE h.is_active true;
+
+--6 SELECT hero_name FROM public.hero
+WHERE class_id IN (SELECT class_id FROM public.class WHERE class_name = 'Skilled Archers' OR class_name = 'Range Archers'
